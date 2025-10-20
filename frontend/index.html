@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptotype - Crypto Trading Platform</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <div class="app-container">
+
+        <!-- Modals -->
+        <div id="signup-modal" class="modal-background --hide">
+            <div class="modal-container">
+                <div class="modal__header">
+                    <button type="button" id="signup-modal-close" class="modal__close" aria-label="Close modal">X</button>
+                    <h3 class="modal__title">Sign Up</h3>
+                    <p>Create your trading account</p>
+                </div>
+                <hr>
+                <form id="signup-modal-form" class="modal__main-form">
+                    <div class="modal__form-field">
+                        <label for="signup-form-username">Username</label>
+                        <input type="text" id="signup-form-username" placeholder="Enter Username" name="username" required>
+                    </div>
+                    <div class="modal__form-field">
+                        <label for="signup-modal__email">Email</label>
+                        <input type="email" id="signup-form-email" placeholder="Enter Email" name="email" required>
+                    </div>
+                    <div class="modal__form-field">
+                        <label for="signup-form-psw">Password</label>
+                        <input type="password" id="signup-modal-psw" placeholder="Enter Password" name="psw" required>
+                    </div>
+                    <button type="submit" id="signup-modal-bnt-submit" class="signup-btn">Create Account</button>
+                </form>
+                <hr>
+                <div class="modal__footer-container">
+                    <div class="modal__footer-section">
+                        <p>Already have an account?</p>
+                        <button type="button" id="signup-modal-btn-login" class="login-btn">Log In</button>
+                    </div>
+                    <hr class="--hide">
+                    <div id="signup-modal-form-response-container" class="modal__form-response --hide">
+                        <h3 id="signup-form-response-type">Response Type</h3>
+                        <p id="signup-form-response-payload">Payload</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="login-modal" class="modal-background --hide">
+            <div class="modal-container">
+                <div class="modal__header">
+                    <button type="button" id="login-modal-close" class="modal__close" aria-label="Close modal">X</button>
+                    <h3 class="modal__title">Log In</h3>
+                    <p>Access your trading account</p>
+                </div>
+                <hr>
+                <form id="login-modal-form" class="modal__main-form">
+                    <div class="modal__form-field">
+                        <label for="login-form-email">Email</label>
+                        <input type="email" id="login-form-email" placeholder="Enter Email" name="email" required>
+                    </div>
+                    <div class="modal__form-field">
+                        <label for="login-form-psw">Password</label>
+                        <input type="password" id="login-form-psw" placeholder="Enter Password" name="psw" required>
+                    </div>
+                    <button type="submit" id="login-modal-btn-submit" class="login-btn">Log In</button>
+                </form>
+                <hr>
+                <div class="modal__footer-container">
+                    <div class="modal__footer-section">
+                        <p>Don't have an account?</p>
+                        <button type="button" id="login-modal-btn-signup" class="signup-btn">Sign Up</button>
+                    </div>
+                    <hr class="--hide">
+                    <div id="login-modal-form-response-container" class="modal__form-response --hide">
+                        <h3 id="login-form-response-type">Response Type</h3>
+                        <p id="login-form-response-payload">Payload</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="account-modal" class="modal-background --hide">
+            <div class="modal-container">
+                <div class="modal__header">
+                    <button type="button" id="account-modal-close" class="modal__close" aria-label="Close modal">X</button>
+                    <h3 class="modal__title">Account Details</h3>
+                    <p>Access your informations</p>
+                </div>
+                <hr>
+                <div class="account-modal__main">
+                    <img src="assets/img/avatar.png" alt="account-icon" class="account-modal__avatar">
+                    <div class="account-modal__user-data">
+                        <div class="account-modal__username-container">
+                            <span class="account-modal__username-label">Username:</span>
+                            <span id="account-modal-username">-</span>
+                        </div>
+                        <div class="account-modal__email-container">
+                            <span class="account-modal__email-label">Email:</span>
+                            <span id="account-modal-email">-</span>
+                        </div>
+                        <div class="account-modal__balance-container">
+                            <span class="account-modal__balance-label">Balance:</span>
+                            <span id="account-modal-balance">$0.00</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <form class="account-modal__form-balance">
+                        <button type="button" class="account-modal__btn" id="account-modal-btn-deposit">Deposit</button>
+                        <input type="number" name="amount" id="amount-input" placeholder="$ Amount" min="0.01" step="0.01" autocomplete="off" required>
+                        <button type="button" class="account-modal__btn" id="account-modal-btn-withdraw">Withdraw</button>
+                    </form>
+                    <hr class="--hide">
+                    <div id="account-modal-form-response-container" class="modal__form-response --hide">
+                        <h3 id="account-form-response-type">Response Type</h3>
+                        <p id="account-form-response-payload">Payload</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            
+            <div class="navbar__section-left">
+                <button type="button" aria-label="Show company info - About Us" class="navbar__brand-btn">
+                    <img src="assets/img/cryptotype.png" alt="Cryptotype - About Us" class="navbar__logo">
+                    <span class="navbar__brand-name">CRYPTOTYPE</span>
+                </button>
+                <div class="navbar__nav-items-container">
+                    <button type="button" class="navbar__nav-item --active">Dashboard</a>
+                    <button type="button" class="navbar__nav-item">Portfolio</a>
+                    <button type="button" class="navbar__nav-item">Analytics</a>
+                </div>
+            </div>
+
+            <div class="navbar__user-section">
+                <div class="user-section__auth">
+                    <button class="signup-btn">Sign Up</button>
+                    <button class="login-btn">Log In</button>
+                </div>
+                <div class="user-section__account --hide">
+                    <span class="account-username">Username</span>
+                    <div class="account-icon__container">
+                        <img src="assets/img/avatar.png" alt="Account" class="account-avatar">
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Application -->
+        <main class="main">
+            <!-- Trading Header -->
+            <div class="main-top__trading-header">
+                <div class="header__coin-selected">
+                    <div class="coin-selected">
+                        <img src="" alt="" id="coin-selected-logo">
+                        <span id="coin-selected-ticker">-</span>
+                    </div>
+                    <table class="coin-selected__table">
+                        <thead>
+                            <tr>
+                                <th>Price</th>
+                                <th>24h Chg</th>
+                                <th id="coin-selected-th-vol24h">24h Vol (-)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="coin-selected-price">-</td>
+                                <td id="coin-selected-chg24h">-</td>
+                                <td id="coin-selected-vol24h">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="header__create-order">
+                    <button type="button" id="buy-btn" class="order-btn">Sign Up</button>
+                    <input type="text" id="order-size-usd" placeholder="USD Amount" class="input-order" autocomplete="off">
+                    <input type="text" id="order-size-base-unit" placeholder="Base Units" class="input-order" readonly autocomplete="off" disabled>
+                    <button type="button" id="sell-btn" class="order-btn">Log In</button>
+                </div>
+            </div>
+
+            <div class="main-right__portfolio">
+                <div class="portfolio__floating-container">
+                    <span class="portfolio__floating-label">Floating P&L (USD)</span>
+                    <span id="portfolio-floating" class="portfolio__floating">0.00</span>
+                </div>
+                <div class="portfolio__info">
+                    <div class="portfolio__balance-container">
+                        <span class="portfolio__label-info">Balance:</span>
+                        <span id="portfolio-balance" class="portfolio__balance">0.00</span>
+                    </div>
+                    <div class="portfolio__equity-container">
+                        <span class="portfolio__label-info">Equity:</span>
+                        <span id="portfolio-equity" class="portfolio__equity">0.00</span>
+                    </div>
+                </div>
+                <div class="portfolio__positions-container">
+                    <span class="positions__label">Positions</span>
+                    <div class="positions__list" id="positions-list">
+                        <!-- Generate Dynamic Content With JS -->
+                        <div class="position__container">
+                            <div class="position__top">
+                                <div class="position__top-left">
+                                    <span id="position-ticker">BTCUSDT</span>
+                                    <span id="ppsition-side">sell</span>
+                                    <span id="position-size">0.50</span>
+                                </div>
+                                <div class="position__top-right">
+                                    <span id="position-entry-data" class="position__entry-data">2025/08/10 - 15:32:13</span>
+                                </div>
+                            </div>
+                            <div class="position__bottom">
+                                <div class="position__bottom-left">
+                                    <span id="position-entry-price" class="position__entry-price">105,000.00</span>
+                                    <span class="position__price-divisor">&#8594;</span>
+                                    <span id="position-current-price" class="position__current-price">100,000.00</span>
+                                </div>
+                                <div class="position__bottom-right">
+                                    <span id="position-tot" class="position__tot">500.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="position__container">
+                            <div class="position__top">
+                                <div class="position__top-left">
+                                    <span id="position-ticker">BTCUSDT</span>
+                                    <span id="ppsition-side">sell</span>
+                                    <span id="position-size">0.50</span>
+                                </div>
+                                <div class="position__top-right">
+                                    <span id="position-entry-data" class="position__entry-data">2025/08/10 - 15:32:13</span>
+                                </div>
+                            </div>
+                            <div class="position__bottom">
+                                <div class="position__bottom-left">
+                                    <span id="position-entry-price" class="position__entry-price">105,000.00</span>
+                                    <span class="position__price-divisor">&#8594;</span>
+                                    <span id="position-current-price" class="position__current-price">100,000.00</span>
+                                </div>
+                                <div class="position__bottom-right">
+                                    <span id="position-tot" class="position__tot">500.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="position__container">
+                            <div class="position__top">
+                                <div class="position__top-left">
+                                    <span id="position-ticker">BTCUSDT</span>
+                                    <span id="ppsition-side">sell</span>
+                                    <span id="position-size">0.50</span>
+                                </div>
+                                <div class="position__top-right">
+                                    <span id="position-entry-data" class="position__entry-data">2025/08/10 - 15:32:13</span>
+                                </div>
+                            </div>
+                            <div class="position__bottom">
+                                <div class="position__bottom-left">
+                                    <span id="position-entry-price" class="position__entry-price">105,000.00</span>
+                                    <span class="position__price-divisor">&#8594;</span>
+                                    <span id="position-current-price" class="position__current-price">100,000.00</span>
+                                </div>
+                                <div class="position__bottom-right">
+                                    <span id="position-tot" class="position__tot">500.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="position__container">
+                            <div class="position__top">
+                                <div class="position__top-left">
+                                    <span id="position-ticker">BTCUSDT</span>
+                                    <span id="ppsition-side">sell</span>
+                                    <span id="position-size">0.50</span>
+                                </div>
+                                <div class="position__top-right">
+                                    <span id="position-entry-data" class="position__entry-data">2025/08/10 - 15:32:13</span>
+                                </div>
+                            </div>
+                            <div class="position__bottom">
+                                <div class="position__bottom-left">
+                                    <span id="position-entry-price" class="position__entry-price">105,000.00</span>
+                                    <span class="position__price-divisor">&#8594;</span>
+                                    <span id="position-current-price" class="position__current-price">100,000.00</span>
+                                </div>
+                                <div class="position__bottom-right">
+                                    <span id="position-tot" class="position__tot">500.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coins List -->
+            <div class="main-left__coins-table">
+                <input type="search" id="search-coins" class="coins-table__search-input" placeholder="Search coins..." autocomplete="off">
+                <div class="coins-table__container">
+                    <table class="coins-table">
+                        <thead class="coins-table__header">
+                            <tr>
+                                <th colspan="2">Crypto</th>
+                                <th>Price</th>
+                                <th>24h Chg</th>
+                            </tr>
+                        </thead>
+                        <tbody id="coins-table-items" class="coins-table__body">
+                            <!-- Dynamic coins list -->
+                        </tbody>
+                   </table>
+                </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="main-center__chart">
+                <div class="tradingview-widget-container">
+                    <div id="chart"></div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="https://s3.tradingview.com/tv.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
