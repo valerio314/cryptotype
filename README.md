@@ -1,6 +1,6 @@
 # Intro
 
--   Cryptotype è un prototipo di una Web Application che simula una piattaforma di trading di criptovalute.
+-   Cryptotype è un prototipo di Web Application che simula una piattaforma di trading di criptovalute.
 -   Questo progetto rappresenta un'idea di base e non intende essere un prodotto pronto per il mercato, realizzato come esercizio per sviluppare competenze.
 -   Lo scopo di Cryptotype è garantire e mostrare le capacità dello sviluppatore, fornendo una guida generale sulle competenze (in continuo sviluppo), sull'intraprendenza e soprattutto mettere in risalto la grande passione per l'Informatica e per i Mercati Finanziari
 
