@@ -1,0 +1,41 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP DATABASE IF EXISTS cryptotype;
+CREATE DATABASE cryptotype;
+USE cryptotype;
+
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS portfolio;
+DROP TABLE IF EXISTS position;
+
+CREATE TABLE user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL UNIQUE,
+    email VARCHAR(254) NOT NULL UNIQUE,
+    password CHAR(60) NOT NULL
+);
+
+
+CREATE TABLE portfolio (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    balance DECIMAL(12,2) NOT NULL DEFAULT 0.00,
+
+    FOREIGN KEY (user_id) REFERENCES user(id)
+);
+
+
+CREATE TABLE position (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    portfolio_id INT NOT NULL,
+    ticker VARCHAR(50) NOT NULL,
+    execution_price DECIMAL(20,8) NOT NULL,
+    size DECIMAL(20,8) NOT NULL,
+    status ENUM('open', 'closed') NOT NULL DEFAULT 'open',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    closed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY (portfolio_id) REFERENCES portfolio(id)
+);
+
+SET FOREIGN_KEY_CHECKS = 1;
