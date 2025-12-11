@@ -1,28 +1,29 @@
 
 # Table of Contents
 
-1.  [Status - Refactoring](#org1caff91)
-2.  [Intro](#org329f36c)
-    1.  [Obiettivo](#orgb9c93c4)
-3.  [Features](#org3c2f919)
-4.  [Tech Stack](#org58eefab)
-    1.  [Database - MySQL Server](#orgc8c835d)
-        1.  [Implementation - Coming Soon &#x2026;](#org648cba5)
-    2.  [Backend - Python](#org4a06830)
-        1.  [Implementation - Coming Soon &#x2026;](#org0861231)
-    3.  [Frontend - HTML - CSS - JavaScript Vanilla](#orgc359546)
-        1.  [Implementation - Coming Soon &#x2026;](#org3ca914e)
-5.  [Local Setup](#org0be2578)
-    1.  [MySQL Server](#orgb52d6e6)
-        1.  [Linux](#orga547223)
-        2.  [MacOS - Coming Soon &#x2026;](#orgb1f541d)
-        3.  [Windows - Coming Soon &#x2026;](#org24cce3d)
-    2.  [Venv Python](#orgd7b1785)
-6.  [Contact Info](#org7f42974)
+1.  [Status - Refactoring](#org0f6e5d5)
+2.  [Intro](#orgff10b67)
+    1.  [Obiettivo](#org8b61a91)
+3.  [Features](#orga15c88a)
+4.  [Tech Stack](#org5fbc844)
+    1.  [Database - MySQL Server](#org9fae2d2)
+        1.  [Implementation - Coming Soon &#x2026;](#orgc4b6234)
+    2.  [Backend - Python](#orgb813d3e)
+        1.  [Implementation - Coming Soon &#x2026;](#orgc4597b6)
+    3.  [Frontend - HTML - CSS - JavaScript Vanilla](#org669ccfd)
+        1.  [Implementation - Coming Soon &#x2026;](#orgfbd5ce0)
+5.  [Local Setup](#org0bd94f4)
+    1.  [MySQL Server](#orgde2af51)
+        1.  [Linux](#orgf7c6f89)
+        2.  [MacOS - Coming Soon &#x2026;](#org84c4cc0)
+        3.  [Windows - Coming Soon &#x2026;](#org71c9233)
+    2.  [Venv Python](#org71c6f5e)
+6.  [Contact Info](#org86026c1)
+
+p#+TITLE: Cryptotype - Cryptocurrencies Trading Platform Simulator
 
 
-
-<a id="org1caff91"></a>
+<a id="org0f6e5d5"></a>
 
 # Status - Refactoring
 
@@ -31,14 +32,14 @@ Dopo aver creato un primo prototipo per testare e validare le idee fondamentali,
 -   **Nota**: attualmente l'aspetto grafico del progetto non è completo e presenta bug, lasciati irrisolti poichè è in corso un refactoring completo.
 
 
-<a id="org329f36c"></a>
+<a id="orgff10b67"></a>
 
 # Intro
 
 Cryptotype è un prototipo di una Web Application che simula una piattaforma di trading di criptovalute, da cui il nome *Crypto = Criptovaluta* | *Type = Prototype*, un ambiente in cui effettettuare analisi, scegliere l'asset preferito, compravendita, visualizzazione portafoglio, dati in real-time, permettendo un'esperienza dinamica.
 
 
-<a id="orgb9c93c4"></a>
+<a id="org8b61a91"></a>
 
 ## Obiettivo
 
@@ -49,7 +50,7 @@ Questo progetto nasce grazie a diverse motivazioni:
 -   **Passione e Piacere**: dare spazio alla semplice voglia di praticare e creare, esternare ciò che si ha all'interno per visualizzarlo all'esterno, ottenendo punti di vista e prospettive differenti, acquisendo così maggiore consapevolezza, riuscendo a comprendere ciò che non era stato compreso analizzandolo solo dall'interno. Questo aspetto è ricorrente in quasi tutte, se non tutte le azioni dell'essere Umano e credo sia la forza trainante di ogni decisione effettuata, consapevolmente o inconsapevolmente.
 
 
-<a id="org3c2f919"></a>
+<a id="orga15c88a"></a>
 
 # Features
 
@@ -65,21 +66,21 @@ Cryptotype mette a disposizione dell'utente diverse funzionalità, permettendo u
 -   **Login**: accesso al proprio account con le relative informazioni e componenti.
 
 
-<a id="org58eefab"></a>
+<a id="org5fbc844"></a>
 
 # Tech Stack
 
 La scelta delle tecnologie utilizzate per sviluppare Cryptotype è basata sulla volontà di operare senza particolari astrazioni, per implementare manualmente e in modo granulare vari aspetti e funzionalità.
 
 
-<a id="orgc8c835d"></a>
+<a id="org9fae2d2"></a>
 
 ## Database - MySQL Server
 
 Ottimo equilibrio tra prestazioni, facilità e affidabilità.
 
 
-<a id="org648cba5"></a>
+<a id="orgc4b6234"></a>
 
 ### Implementation - Coming Soon &#x2026;
 
@@ -87,14 +88,14 @@ Ottimo equilibrio tra prestazioni, facilità e affidabilità.
 -   Integrity&#x2026;
 
 
-<a id="org4a06830"></a>
+<a id="orgb813d3e"></a>
 
 ## Backend - Python
 
 Rapidità nella prototipazione e testing ed ecosistema di librerie specializzate ai fini di Cryptotype.
 
 
-<a id="org0861231"></a>
+<a id="orgc4597b6"></a>
 
 ### Implementation - Coming Soon &#x2026;
 
@@ -105,14 +106,14 @@ Rapidità nella prototipazione e testing ed ecosistema di librerie specializzate
 -   Asynchronous Programming&#x2026;
 
 
-<a id="orgc359546"></a>
+<a id="org669ccfd"></a>
 
 ## Frontend - HTML - CSS - JavaScript Vanilla
 
 La scelta di utilizzare JavaScript vanilla è stata fatta per implementare e gestire manualmente le logiche di funzionamento e per comprendere a pieno il funzionamento sottostante i Framework moderni il principcio di SoC - Separation of Concerns - e Design Patterns (SSOT, Singletone, Observer/Publish-Subscribe)
 
 
-<a id="org3ca914e"></a>
+<a id="orgfbd5ce0"></a>
 
 ### Implementation - Coming Soon &#x2026;
 
@@ -126,17 +127,17 @@ La scelta di utilizzare JavaScript vanilla è stata fatta per implementare e ges
 -   DOM Manipulation&#x2026;
 
 
-<a id="org0be2578"></a>
+<a id="org0bd94f4"></a>
 
 # Local Setup
 
 
-<a id="orgb52d6e6"></a>
+<a id="orgde2af51"></a>
 
 ## MySQL Server
 
 
-<a id="orga547223"></a>
+<a id="orgf7c6f89"></a>
 
 ### Linux
 
@@ -147,49 +148,89 @@ La scelta di utilizzare JavaScript vanilla è stata fatta per implementare e ges
 
 -   **Configurazione**:
     
-              sudo mysql_secure_installation   # Seguire l'installazione guidata
+        sudo mysql_secure_installation   # Seguire l'installazione guidata
         
-              ################################
-              # Secure Installation Guide
-              # 1. VALIDATE PASSWORD component - BUG:
-              #   In questo step è presente un BUG, viene chiesto se imporre password
-              #   per tutti gli utenti (incluso root), prevenendo password deboli.
-              #   In alcuni casi l'impostazione di una password viene completamente saltata.
-              #
-              #   Soluzione:
-              #     1. Avviare mysql
-              #     2. Se verrà chiesto di inserire una password, inserire qualunque
-              #        carattere, l'accesso andrà a buon fine.
-              #     3. Eseguire il comando seguente, sostituendo al placeholder "new_password"
-              #        la vostra password:
-              #        ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new_password';
-              #     4. I prossimi accessi dovranno essere eseguiti tramite "mysql -u root -p"
-              #
-              # 2. Anonymous User:
-              #   Nello step 2 dell'installazione, MySQL indica la presenza,
-              #   per default, di utenti anonimi.
-              #   Lasciare utenti anonimi comporta una grave vulnerabilità di sicurezza.
-              #   Permette a chiunque di connettersi al db senza username o password.
-              #   Rimuovere gli utenti anonimi per una sicurezza maggiore.
-              #
-              # 3. Remote Access:
-              #   Negare la possibilità di effettuare l'accesso remoto all'utente root.
-              #################################
+        ################################
+        # Secure Installation Guide
+        # 1. VALIDATE PASSWORD component - BUG:
+        #   In questo step è presente un BUG, viene chiesto se imporre password
+        #   per tutti gli utenti (incluso root), prevenendo password deboli.
+        #   In alcuni casi l'impostazione di una password viene completamente saltata.
+        #
+        #   Soluzione:
+        #     1. Avviare mysql
+        #     2. Se verrà chiesto di inserire una password, inserire qualunque
+        #        carattere, l'accesso andrà a buon fine.
+        #     3. Eseguire il comando seguente, sostituendo al placeholder "new_password"
+        #        la vostra password:
+        #        ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new_password';
+        #     4. I prossimi accessi dovranno essere eseguiti tramite "mysql -u root -p"
+        #
+        # 2. Anonymous User:
+        #   Nello step 2 dell'installazione, MySQL indica la presenza,
+        #   per default, di utenti anonimi.
+        #   Lasciare utenti anonimi comporta una grave vulnerabilità di sicurezza.
+        #   Permette a chiunque di connettersi al db senza username o password.
+        #   Rimuovere gli utenti anonimi per una sicurezza maggiore.
+        #
+        # 3. Remote Access:
+        #   Negare la possibilità di effettuare l'accesso remoto all'utente root.
+        #################################
+
+-   **Script Initialization**: script di inizializzazione del database
+    
+        SET FOREIGN_KEY_CHECKS = 0;
+        
+        DROP DATABASE IF EXISTS cryptotype;
+        CREATE DATABASE cryptotype;
+        USE cryptotype;
+        
+        DROP TABLE IF EXISTS user;
+        DROP TABLE IF EXISTS portfolio;
+        DROP TABLE IF EXISTS position;
+        
+        CREATE TABLE user (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            username VARCHAR(30) NOT NULL UNIQUE,
+            email VARCHAR(254) NOT NULL UNIQUE,
+            password CHAR(60) NOT NULL
+        );
+        
+        CREATE TABLE portfolio (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            user_id INT NOT NULL,
+            balance DECIMAL(12,2) NOT NULL DEFAULT 0.00,
+            FOREIGN KEY (user_id) REFERENCES user(id)
+        );
+        
+        CREATE TABLE position (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            portfolio_id INT NOT NULL,
+            ticker VARCHAR(50) NOT NULL,
+            execution_price DECIMAL(20,8) NOT NULL,
+            size DECIMAL(20,8) NOT NULL,
+            status ENUM('open', 'closed') NOT NULL DEFAULT 'open',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            closed_at TIMESTAMP NULL DEFAULT NULL,
+            FOREIGN KEY (portfolio_id) REFERENCES portfolio(id)
+        );
+        
+        SET FOREIGN_KEY_CHECKS = 1;
 
 -   **Official Doc**: <https://dev.mysql.com/doc/>
 
 
-<a id="orgb1f541d"></a>
+<a id="org84c4cc0"></a>
 
 ### MacOS - Coming Soon &#x2026;
 
 
-<a id="org24cce3d"></a>
+<a id="org71c9233"></a>
 
 ### Windows - Coming Soon &#x2026;
 
 
-<a id="orgd7b1785"></a>
+<a id="org71c6f5e"></a>
 
 ## Venv Python
 
@@ -216,7 +257,7 @@ La scelta di utilizzare JavaScript vanilla è stata fatta per implementare e ges
         -   Selezionare "python" presente nel venv
 
 
-<a id="org7f42974"></a>
+<a id="org86026c1"></a>
 
 # Contact Info
 
