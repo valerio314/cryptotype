@@ -33,7 +33,7 @@ CREATE TABLE position (
     size DECIMAL(20,8) NOT NULL,
     status ENUM('open', 'closed') NOT NULL DEFAULT 'open',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    closed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    closed_at TIMESTAMP NULL DEFAULT NULL,
     
     FOREIGN KEY (portfolio_id) REFERENCES portfolio(id)
 );
