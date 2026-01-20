@@ -1,4 +1,4 @@
-m# Table of Contents
+# Table of Contents
 
 1.  [Status - Refactoring](#org35cdd0a)
 2.  [Intro](#org50e7d41)
